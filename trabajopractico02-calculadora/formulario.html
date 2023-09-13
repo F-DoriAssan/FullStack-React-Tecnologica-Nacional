@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <form action="javascript:void()" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="name">Nombre: </label>
+            <input type="text" name="name" id="name" placeholder="Ingrese su nombre" required>
+        </div>
+
+        <div>
+            <label for="lastName">Apellido: </label>
+            <input type="text" name="lastName" id="lastName" placeholder="Ingrese su apellido" required>
+        </div>
+
+        <div>
+            <label for="id">DNI: </label>
+            <input class="cl-validate-dni" type="text" name="dni" placeholder="Introduzca su DNI" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" minlength="9" maxlength="9" />
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" pattern=".+@gmail\.com" size="30" placeholder="correo@email.com" required />
+        </div>
+
+        <div>
+            <label for="phone">N° de Celular:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="secure">Tipo de seguro: </label> 
+            <br>
+            <select id="secure" onChange="update()">
+                <option value="" disabled selected>Seleccione una categoría...</option>
+                <option value="500">Básico</option>
+                <option value="1000">Intermedio</option>
+                <option value="1500">Premium</option>
+              </select>
+              <br>
+              $<input type="text" id="value">
+              
+
+              <!-- Script de conexion -->
+              <script type="text/javascript">
+                function update() { 
+                  var select = document.getElementById('secure');
+                  var option = select.options[select.selectedIndex];
+                  document.getElementById('value').value = option.value;
+                }
+                update();
+               </script>
+        </div>
+
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    UTNBA | REACT © 2023 DoriAss
+    <br>
+    <br>
+    <a href="ttps://github.com/F-DoriAssan" target="blank">
+        <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg"
+        alt="midu.dev" height="28px" width="28px" />
+    </a>
+    
+    <a href="ailto:doriass.f@gmail.com" target="blank">
+        <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/gmail.svg"
+        alt="midu.dev" height="28px" width="28px" />
+    </a>
+    </body>
+
+    
+</html>
