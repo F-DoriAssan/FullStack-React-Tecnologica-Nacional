@@ -1,0 +1,26 @@
+{
+  "name": "calculadora-react03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "nodemon": "^2.0.22",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
+  }
+}
