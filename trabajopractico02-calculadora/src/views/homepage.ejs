@@ -1,0 +1,53 @@
+<%- layout('layouts/boilerplate') %>
+    <!-- loader -->
+    <div class="loader-container">
+        <img draggable="false" src="/images/preloader.gif" alt="preloader">
+    </div>
+    
+    <!--Inicio de seccion INICIO -->
+    <section class="wrapper">
+      <div class="container">
+        <div class="header-container">
+          <!-- Este encabezado también notifica sobre el cambio de tema..-->
+          <h1 id="toast">Calculadora</h1>
+          <div class="top-buttons">
+            <a href="https://github.com/F-DoriAssan">
+              <img src="images/GitHubLight.svg" alt="Sun Icon" height="22.5" width="22.5" id="github-icon">
+            </a>
+            <button type="button" onclick="changeTheme()" class="theme-button">
+              <img src="images/SunIcon.svg" alt="Theme Icon" height="19" width="19" id="theme-icon">
+            </button>
+          </div>
+        </div>
+      
+        <div class="first-row">
+          <input type="text" name="result" id="result" placeholder="Resultado" readonly />
+          <input type="button" value="CE" onclick="result.value=''" id="clear-button" />
+        </div>
+        <div class="second-row">
+          <input type="button" value="1" onclick="liveScreen(1)" />
+          <input type="button" value="2" onclick="liveScreen(2)" />
+          <input type="button" value="3" onclick="liveScreen(3)" />
+          <input type="button" value="+" onclick="liveScreen('+')" />
+        </div>
+        <div class="third-row">
+          <input type="button" value="4" onclick=" liveScreen(4)" />
+          <input type="button" value="5" onclick=" liveScreen(5)" />
+          <input type="button" value="6" onclick=" liveScreen(6)" />
+          <input type="button" value="-" onclick="liveScreen('-')" />
+        </div>
+        <div class="fourth-row">
+          <input type="button" value="7" onclick="liveScreen(7)" />
+          <input type="button" value="8" onclick="liveScreen(8)" />
+          <input type="button" value="9" onclick=" liveScreen(9)" />
+          <input type="button" value="x" onclick="liveScreen('*')" />
+        </div>
+        <div class="fifth-row">
+          <input type="button" value="/" onclick="liveScreen('/')" />
+          <input type="button" value="0" onclick="liveScreen(0)" />
+          <input type="button" value="." onclick="liveScreen('.')" />
+          <input type="button" value="=" onclick="calculate(result.value)" />
+        </div>
+      </div>  
+      </div>        
+    </section>
